@@ -2,7 +2,7 @@
 
 Pihole, when installed on a common distro such as Rasbpian Jessie, will by default have SSH, HTTP and DNS available to all external IPv6 Addresses. This is more the fault of the OS and not Pihole itself.
 
-This ip6tables config will reject SSH and HTTP on **ALL** IPv6 addresses, leaving DNS, ICMPv6 and DHCPv6 open for fe80::/64. You may wish to either fork this project, or modify the bash script to open additional ports.
+This ip6tables config will reject mostly everything by default for **ALL** IPv6 addresses, leaving only ICMPv6 open for all IPv6 addresses, and DHCPv6/DNSv6 open for Link-Local (fe80::/64) addresses. You may wish to either fork this project, or modify the bash script to open additional ports.
 
 # Prerequisites
 - wget
