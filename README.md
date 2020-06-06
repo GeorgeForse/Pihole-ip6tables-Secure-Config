@@ -20,4 +20,4 @@ In bash, run the following command:
 # Caution:
 This configuration is still in testing. Install at your own risk.
 
-**As stated above, this script will block everything apart from ICMPv6 for all addresses, DHCPv6 and DNSv6 for Link-Local (fe80::/64) addresses. Make sure you have alternate remote control methods, such as SSH on IPV4, before running this script if you do not have physical access to the device you're running the script on.**
+**As stated above, this script will block everything apart from ICMPv6 for all addresses, and only allow DHCPv6 and DNSv6 for Link-Local (fe80::/64) addresses. Make sure you have alternate remote control methods, such as SSH on IPV4, before running this script if you do not have physical access to the device you're running the script on.**
