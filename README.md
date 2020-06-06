@@ -1,12 +1,23 @@
-# Pihole ip6tables IPV6 Secure Config
-Stealth your Pihole instance over IPv6, only responding to ICMPv6 over the internet, and Port 53 (TCP/UDP) & DHCPv6 for fe80::/64
+# A secure ip6tables config for Pihole
+
+Pihole, when installed on a common distro such as Rasbpian Jessie, will by default have SSH, HTTP and DNS available to all external IPv6 Addresses. This is more the fault of the OS and not Pihole itself.
+
+This ip6tables config will reject SSH and HTTP on **ALL** IPv6 addresses, leaving DNS, ICMPv6 and DHCPv6 open for fe80::/64. You may wish to either fork this project, or modify the bash script to open additional ports.
 
 # Prerequisites
-You will need wget and ip6tables installed. It is also recommended that you check "pihole-ip6tables-secure-config.bash" manually to ensure that the git repository has not been compromised, not that I would expect it to be.
+- wget
+- ip6tables 
+
+It is also recommended that you check "pihole-ip6tables-secure-config.bash" manually to ensure that the git repository has not been compromised, not that I would expect it to be.
 
 # Usage & Installation
 In bash, run the following command:
-> wget -O - https://raw.githubusercontent.com/MrGForse/Pihole-ip6tables-Secure-Config/master/pihole-ip6tables-secure-config.bash | sudo bash
+
+```bash
+ wget -O - https://raw.githubusercontent.com/MrGForse/Pihole-ip6tables-Secure-Config/master/pihole-ip6tables-secure-config.bash | sudo bash 
+```
 
 # Caution:
 This configuration is still in testing. Install at your own risk.
+
+**As stated above, this script will block everything apart from ICMPv6 for all addresses, DHCPv6 and DNSv6 for Link-Local (fe80::/64) addresses. Make sure you have alternate remote control methods, such as SSH on IPV4, before running this script if you do not have physical access to the device you're running the script on.**
