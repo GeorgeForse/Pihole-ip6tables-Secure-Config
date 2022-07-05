@@ -14,7 +14,7 @@ It is also recommended that you check "pihole-ip6tables-secure-config.bash" manu
 In bash, run the following command:
 
 ```bash
- wget -O - https://raw.githubusercontent.com/MrGForse/Pihole-ip6tables-Secure-Config/master/pihole-ip6tables-secure-config.bash | sudo bash 
+ wget -O - https://raw.githubusercontent.com/GeorgeForse/Pihole-ip6tables-Secure-Config/master/pihole-ip6tables-secure-config.bash | sudo bash 
 ```
 
 # Caution:
